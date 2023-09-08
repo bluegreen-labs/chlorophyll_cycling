@@ -1,16 +1,34 @@
-Package: RTemplate
-Title: Your project
+Package: ChlorophyllCycling
+Title: Leaf pigment mass balance model
 Version: 0.1
-Authors@R: 
-    person(
-      given = "X",
-      family = "Y",
-      email = "x.y@example.com",
-      role = c("aut", "cre"),
-      comment = c(ORCID = "0000-0000-0000-0000")
-    )
-Description: What the package does (one paragraph).
+Authors@R: c(person(
+               family = "Hufkens",
+               given = "Koen",
+               email = "koen.hufkens@gmail.com",
+               role = c("aut", "cre"),
+               comment = c(ORCID = "0000-0002-5070-8109")
+               ),
+            person(given = "BlueGreen Labs",
+              role = c("cph", "fnd"))
+           )
+Description: Reproducible worked example of a pigment mass balance model for leaf senescence
+URL: https://github.com/khufkens/chlorophyll_cycling_model
 License: AGPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+Depends:
+    R (>= 4.2)
+Imports:
+    dplyr,
+    tidyr,
+    BayesianTools,
+    appeears,
+    phenocamr
+ByteCompile: true
+Suggests:
+    rmarkdown,
+    here,
+    ggplot2,
+    patchwork
+VignetteBuilder: knitr
